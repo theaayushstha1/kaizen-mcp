@@ -92,13 +92,15 @@ async function main() {
   await animateTerminal(page);
   await sleep(1200);
 
-  // 58s: scorecard.
+  // 58s: scorecard — load then scroll through the full table.
   await page.goto(SCORECARD_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(5500);
+  await sleep(1400);
+  await smoothScrollFull(page, 6000);
 
-  // 64s: process log.
+  // 70s: process log — load then scroll through decisions + receipts.
   await page.goto(PROCESS_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(4500);
+  await sleep(1400);
+  await smoothScrollFull(page, 8000);
 
   console.log('\n  Demo complete.\n');
   await context.close();
@@ -115,6 +117,21 @@ async function smoothMoveTo(page, locator) {
   const box = await locator.boundingBox();
   if (!box) return;
   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2, { steps: 25 });
+}
+
+async function smoothScrollFull(page, durationMs) {
+  const totalScrollable = await page.evaluate(() => Math.max(0, document.body.scrollHeight - window.innerHeight));
+  if (totalScrollable <= 0) {
+    await sleep(durationMs);
+    return;
+  }
+  const steps = 60;
+  const stepPx = totalScrollable / steps;
+  const interval = durationMs / steps;
+  for (let i = 0; i < steps; i++) {
+    await page.mouse.wheel(0, stepPx);
+    await sleep(interval);
+  }
 }
 
 function terminalPage() {
