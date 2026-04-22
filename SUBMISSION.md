@@ -23,7 +23,7 @@ Plus a process log demonstrating autonomy, efficiency, and engineering taste.
 | --- | --- | --- |
 | 1 | Publicly accessible tool | https://kaizen-silk.vercel.app |
 | 2 | Long-form blog post (1,800 words) | https://kaizen-silk.vercel.app/blog/your-agent-is-a-customer-now |
-| 3 | Video tutorial (2:34) | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/assets/kaizen-demo.mp4 |
+| 3 | Video tutorial (2:34) | https://kaizen-silk.vercel.app/demo.mp4 |
 | 4 | Five X/Twitter post drafts | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/GROWTH.md#4-five-tweet-drafts |
 | 5 | $100 growth campaign report | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/GROWTH.md |
 | 6 | Process log | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/PROCESS.md |
