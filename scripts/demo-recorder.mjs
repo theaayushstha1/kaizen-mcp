@@ -7,11 +7,11 @@
  *   13–29   first question typed, overview response
  *   29–49   second question typed, describe_chart → get_chart composition
  *   49–61   reasoning trace panel
- *   61–83   blog post + architecture SVG diagram scroll
- *   83–100  GitHub repo homepage + README
- *   100–116 terminal pane: npx -y kaizen-mcp over stdio
- *   116–132 SCORECARD.md on GitHub
- *   132–150 PROCESS.md on GitHub
+ *   61–77   blog post + architecture SVG diagram scroll
+ *   77–92   GitHub repo homepage + README
+ *   92–107  terminal pane: npx -y kaizen-mcp over stdio (long dwell)
+ *   107–122 SCORECARD.md on GitHub
+ *   122–140 PROCESS.md on GitHub
  *
  * Run: KAIZEN_VIDEO=1 node scripts/demo-recorder.mjs
  */
@@ -91,31 +91,31 @@ async function main() {
 
   // 61s: blog post — scroll through content, pause on SVG architecture diagram.
   await page.goto(BLOG_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1800);
-  await smoothScrollToDiagram(page, 10000);
-  await sleep(4000);
-  await smoothScrollFull(page, 5000);
+  await sleep(1400);
+  await smoothScrollToDiagram(page, 7500);
+  await sleep(3500);
+  await smoothScrollFull(page, 3500);
 
-  // 83s: GitHub repo homepage + README.
+  // 77s: GitHub repo homepage + README.
   await page.goto(REPO_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1800);
-  await smoothScrollFull(page, 14500);
+  await sleep(1400);
+  await smoothScrollFull(page, 13500);
 
-  // 100s: terminal pane for the MCP adapter.
+  // 92s: terminal pane for the MCP adapter — long dwell so viewer can read.
   await page.goto('data:text/html;charset=utf-8,' + encodeURIComponent(terminalPage()));
-  await sleep(600);
+  await sleep(900);
   await animateTerminal(page);
-  await sleep(1400);
+  await sleep(8500);
 
-  // 116s: scorecard — load then scroll through the full table.
+  // 107s: scorecard — load then scroll through the full table.
   await page.goto(SCORECARD_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1400);
-  await smoothScrollFull(page, 14000);
+  await sleep(1200);
+  await smoothScrollFull(page, 13500);
 
-  // 132s: process log — load then scroll through decisions + receipts.
+  // 122s: process log — load then scroll through decisions + receipts.
   await page.goto(PROCESS_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1400);
-  await smoothScrollFull(page, 16000);
+  await sleep(1200);
+  await smoothScrollFull(page, 16500);
 
   console.log('\n  Demo complete.\n');
   await context.close();
@@ -194,34 +194,44 @@ function terminalPage() {
 }
 
 async function animateTerminal(page) {
+  const append = (chunk) => page.evaluate((c) => {
+    const el = document.getElementById('out');
+    if (!el) return;
+    el.innerHTML += c
+      .replace(/</g, '&lt;')
+      .replace(/\$/g, '<span class="sage">$</span>')
+      .replace(/→/g, '<span class="sage">→</span>')
+      .replace(/kaizen_[a-z_]+/g, (m) => `<span class="sage">${m}</span>`)
+      .replace(/kaizen-mcp/g, '<span class="sage">kaizen-mcp</span>');
+  }, chunk);
+
+  // Type the install command char-by-char so the viewer sees it happen.
+  const cmd = 'npx -y kaizen-mcp';
+  for (const ch of cmd) {
+    await append(ch === '<' || ch === '>' || ch === '&' ? ch : ch);
+    await sleep(80 + Math.random() * 40);
+  }
+  await append('\n');
+  await sleep(600);
+
   const lines = [
-    { text: 'npx -y kaizen-mcp\n', after: 400 },
     { text: '\n', after: 0 },
-    { text: 'kaizen-mcp v0.1.0 listening on stdio\n', after: 500 },
+    { text: 'kaizen-mcp v0.1.0 listening on stdio\n', after: 600 },
     { text: '\n', after: 0 },
-    { text: '→ tools/list { count: 4 }\n', after: 350 },
-    { text: '   kaizen_list_charts\n', after: 120 },
-    { text: '   kaizen_get_overview\n', after: 120 },
-    { text: '   kaizen_describe_chart\n', after: 120 },
-    { text: '   kaizen_get_chart\n\n', after: 280 },
-    { text: '→ tools/call kaizen_get_overview\n', after: 450 },
-    { text: '   MRR: $18,422  ·  active subs: 3,417  ·  trials: 194\n\n', after: 500 },
-    { text: '→ tools/call kaizen_describe_chart { chart: "mrr" }\n', after: 450 },
-    { text: '   segments: [ store, product, country, platform ]\n\n', after: 500 },
+    { text: '→ tools/list { count: 4 }\n', after: 450 },
+    { text: '   kaizen_list_charts\n', after: 160 },
+    { text: '   kaizen_get_overview\n', after: 160 },
+    { text: '   kaizen_describe_chart\n', after: 160 },
+    { text: '   kaizen_get_chart\n\n', after: 380 },
+    { text: '→ tools/call kaizen_get_overview\n', after: 500 },
+    { text: '   MRR: $18,422  ·  active subs: 3,417  ·  trials: 194\n\n', after: 600 },
+    { text: '→ tools/call kaizen_describe_chart { chart: "mrr" }\n', after: 500 },
+    { text: '   segments: [ store, product, country, platform ]\n\n', after: 600 },
     { text: '→ tools/call kaizen_get_chart { chart: "mrr", segment: "store" }\n', after: 500 },
     { text: '   app_store: $12,108  ·  play_store: $6,314\n', after: 300 },
   ];
   for (const line of lines) {
-    await page.evaluate((chunk) => {
-      const el = document.getElementById('out');
-      if (!el) return;
-      el.innerHTML += chunk
-        .replace(/</g, '&lt;')
-        .replace(/\$/g, '<span class="sage">$</span>')
-        .replace(/→/g, '<span class="sage">→</span>')
-        .replace(/kaizen_[a-z_]+/g, (m) => `<span class="sage">${m}</span>`)
-        .replace(/kaizen-mcp/g, '<span class="sage">kaizen-mcp</span>');
-    }, line.text);
+    await append(line.text);
     await sleep(line.after);
   }
 }
