@@ -17,19 +17,19 @@ Three deliverables inside a single public doc, plus process transparency:
 
 Plus a process log demonstrating autonomy, efficiency, and engineering taste.
 
-## The six required links
+## The six required deliverables
 
-| Deliverable | Link |
-| --- | --- |
-| 1. Tool — deployed playground | https://kaizen-silk.vercel.app |
-| 1a. Tool — MCP adapter (stdio) | `pnpm mcp` in the repo — reuses `lib/kaizen/tools.ts`, works in Claude Desktop / Cursor |
-| 2. Tool — source repo | https://github.com/theaayushstha1/kaizen-mcp |
-| 3. Blog post | `/blog/your-agent-is-a-customer-now` on the deployed URL |
-| 4. Video (2 min) | https://www.loom.com/share/<slug> (updated after recording) |
-| 5. Five tweet drafts | [docs/GROWTH.md section 4](docs/GROWTH.md) |
-| 6. $100 growth strategy | [docs/GROWTH.md](docs/GROWTH.md) |
-| plus — process log | [docs/PROCESS.md](docs/PROCESS.md) |
-| plus — eval scorecard | [evals/SCORECARD.md](evals/SCORECARD.md) |
+| # | Deliverable (per PDF) | Link |
+| --- | --- | --- |
+| 1 | Publicly accessible tool | https://kaizen-silk.vercel.app |
+| 2 | Long-form blog post (1,800 words) | https://kaizen-silk.vercel.app/blog/your-agent-is-a-customer-now |
+| 3 | Video tutorial (2:34) | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/assets/kaizen-demo.mp4 |
+| 4 | Five X/Twitter post drafts | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/GROWTH.md#4-five-tweet-drafts |
+| 5 | $100 growth campaign report | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/GROWTH.md |
+| 6 | Process log | https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/PROCESS.md |
+| + | Source repo (one doc containing all six) | https://github.com/theaayushstha1/kaizen-mcp |
+| + | Eval scorecard (29/30, 97%) | https://github.com/theaayushstha1/kaizen-mcp/blob/main/evals/SCORECARD.md |
+| + | MCP stdio adapter | `bin/mcp.ts` in the repo — `pnpm mcp` locally, runs in Claude Desktop / Cursor |
 
 ## Strategic angle (the differentiator)
 
@@ -84,7 +84,7 @@ Joey published another Charts MCP server. Kaizen does not. The specific moves Ka
 
 ## What I would ship next (if invited)
 
-- Thin MCP adapter at `bin/mcp.ts` that reuses `lib/kaizen/tools.ts` so the four primitives ship as an MCP server too. npm package name `kaizen-mcp` already reserved. Code is trivial after the engine exists.
+- Publish `kaizen-mcp` to npm so `npx -y kaizen-mcp` works for any reviewer with a Charts key (adapter at `bin/mcp.ts` is already shipped in the repo — just not yet published).
 - Multi project selector in the playground with reviewer project keys loaded from env.
 - A /compare endpoint that surfaces deltas between two date ranges, narrated by the agent.
 
