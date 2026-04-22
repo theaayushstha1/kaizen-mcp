@@ -3,7 +3,7 @@ import Link from 'next/link';
 const links = [
   { href: 'https://github.com/theaayushstha1/kaizen-mcp', label: 'repo' },
   { href: '/blog/your-agent-is-a-customer-now', label: 'blog' },
-  { href: '/demo', label: 'demo' },
+  { href: '/demo.mp4', label: 'demo', external: true },
   { href: 'https://github.com/theaayushstha1/kaizen-mcp/blob/main/evals/SCORECARD.md', label: 'scorecard' },
   { href: 'https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/PROCESS.md', label: 'process log' },
 ];
@@ -26,7 +26,7 @@ export function Footer() {
       <div className="flex items-center gap-2 font-mono text-[11px] text-ink-muted">
         {links.map((l, i) => (
           <span key={l.href} className="flex items-center gap-2">
-            {l.href.startsWith('http') ? (
+            {l.href.startsWith('http') || l.external ? (
               <a
                 className="transition-colors hover:text-sage hover:underline"
                 href={l.href}
