@@ -1,17 +1,25 @@
 #!/usr/bin/env node
 /**
- * Playwright demo for Kaizen @ 1920x1080, matched to ~2:30 Kokoro voiceover.
+ * Playwright demo for Kaizen @ 1920x1080, synced to the Kokoro voiceover.
  *
- * Beats (seconds):
- *   0–13    hero + thesis
- *   13–29   first question typed, overview response
- *   29–49   second question typed, describe_chart → get_chart composition
- *   49–61   reasoning trace panel
- *   61–77   blog post + architecture SVG diagram scroll
- *   77–92   GitHub repo homepage + README
- *   92–107  terminal pane: npx -y kaizen-mcp over stdio (long dwell)
- *   107–122 SCORECARD.md on GitHub
- *   122–140 PROCESS.md on GitHub
+ * Beats are wall-clocked to the measured narration timeline (see
+ * /tmp/voice-timeline.json from scripts/gen-segments.py). Each `waitUntil`
+ * sleeps until that absolute second of the recording — keeps the visuals
+ * locked to the voiceover regardless of how long a tool call takes.
+ *
+ *   name       narration    action
+ *   hero       0.0  → 20.8   playground loads, dwell
+ *   darknoise  21.1 → 31.1   hover input, pre-click
+ *   q1         31.5 → 46.4   type "How is Dark Noise doing right now", overview
+ *   q2         46.7 → 64.8   type "Break down MRR by store this quarter"
+ *   trace      65.2 → 79.3   open reasoning trace panel
+ *   blog       79.6 → 93.9   navigate to blog post, read intro
+ *   diagram    94.2 → 107.7  scroll to SVG architecture diagram
+ *   repo       108.0 → 118.9 GitHub repo homepage + README
+ *   mcp        119.2 → 131.1 terminal: npx -y kaizen-mcp
+ *   scorecard  131.5 → 140.5 SCORECARD.md scroll
+ *   process    140.8 → 149.5 PROCESS.md scroll
+ *   signoff    149.8 → 154.3 final dwell
  *
  * Run: KAIZEN_VIDEO=1 node scripts/demo-recorder.mjs
  */
@@ -33,6 +41,35 @@ const W = 1920;
 const H = 1080;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Beats from /tmp/voice-timeline.json, in seconds.
+const T = {
+  hero:      { start: 0.0,   end: 20.8 },
+  darknoise: { start: 21.1,  end: 31.1 },
+  q1:        { start: 31.5,  end: 46.4 },
+  q2:        { start: 46.7,  end: 64.8 },
+  trace:     { start: 65.2,  end: 79.3 },
+  blog:      { start: 79.6,  end: 93.9 },
+  diagram:   { start: 94.2,  end: 107.7 },
+  repo:      { start: 108.0, end: 118.9 },
+  mcp:       { start: 119.2, end: 131.1 },
+  scorecard: { start: 131.5, end: 140.5 },
+  process:   { start: 140.8, end: 149.5 },
+  signoff:   { start: 149.8, end: 154.6 },
+};
+
+let t0 = 0;
+const elapsed = () => (Date.now() - t0) / 1000;
+const waitUntil = async (targetSec, label = '') => {
+  const now = elapsed();
+  const delta = targetSec - now;
+  if (delta > 0) {
+    if (label) console.log(`  [${now.toFixed(1)}s] waiting ${delta.toFixed(1)}s → ${label} @ ${targetSec}s`);
+    await sleep(delta * 1000);
+  } else if (label) {
+    console.log(`  [${now.toFixed(1)}s] BEHIND by ${(-delta).toFixed(1)}s at ${label} — skipping catch-up`);
+  }
+};
+
 async function main() {
   const browser = await chromium.launch({
     headless: false,
@@ -48,83 +85,96 @@ async function main() {
   console.log('\n════════════════════════════════════════');
   console.log(`  Kaizen walkthrough @ ${W}x${H}`);
   console.log(`  Recording: ${RECORD_VIDEO ? 'on' : 'off'}`);
+  console.log(`  Target: 154.6s, synced to voiceover`);
   console.log('════════════════════════════════════════\n');
-  await sleep(3000);
 
-  // 0–13s: hero.
+  // Preload the hero so recording starts on the app, not blank.
   await page.goto(URL, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('input[placeholder*="Dark Noise"]', { timeout: 20000 });
-  await sleep(11500);
 
-  // 13s: first question.
+  // t=0 begins here, aligned with voiceover start.
+  t0 = Date.now();
+
+  // hero (0 → 20.8): playground loads, dwell on hero copy.
+  await waitUntil(T.darknoise.start, 'darknoise');
+
+  // darknoise (21.1 → 31.1): move cursor over input, pre-focus.
   const input = page.locator('input[placeholder*="Dark Noise"]');
   await smoothMoveTo(page, input);
   await sleep(500);
   await input.click();
-  await typeHuman(page, input, 'How is Dark Noise doing right now');
-  await sleep(350);
+  await waitUntil(T.q1.start, 'q1');
+
+  // q1 (31.5 → 46.4): type first question, click Ask.
+  await typeHuman(page, input, 'How is Dark Noise doing right now', 45);
+  await sleep(250);
   await page.locator('button:has-text("Ask")').click();
-
   await page.waitForSelector('text=/MRR|subscriptions|trial|overview/i', { timeout: 45000 });
-  await sleep(9500);
+  await waitUntil(T.q2.start, 'q2');
 
-  // 29s: second question.
+  // q2 (46.7 → 64.8): type second question, watch composition.
   await input.click();
   await input.fill('');
-  await typeHuman(page, input, 'Break down MRR by store this quarter');
-  await sleep(300);
+  await typeHuman(page, input, 'Break down MRR by store this quarter', 42);
+  await sleep(250);
   await page.locator('button:has-text("Ask")').click();
-
   await page.waitForSelector('text=/store|app_store|play_store/i', { timeout: 60000 });
-  await sleep(12000);
+  await waitUntil(T.trace.start, 'trace');
 
-  // 49s: reasoning trace.
+  // trace (65.2 → 79.3): open reasoning trace panel.
   const traceButton = page.locator('button:has-text("reasoning trace")').first();
   if (await traceButton.isVisible().catch(() => false)) {
     await traceButton.scrollIntoViewIfNeeded();
-    await sleep(300);
+    await sleep(200);
     await traceButton.click();
-    await sleep(10500);
-  } else {
-    await sleep(10500);
   }
+  await waitUntil(T.blog.start, 'blog');
 
-  // 61s: blog post — scroll through content, pause on SVG architecture diagram.
+  // blog (79.6 → 93.9): navigate + read intro.
   await page.goto(BLOG_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
   await sleep(1400);
-  await smoothScrollToDiagram(page, 7500);
-  await sleep(3500);
-  await smoothScrollFull(page, 3500);
+  await smoothScrollUntil(page, T.diagram.start, 0.7);
+  await waitUntil(T.diagram.start, 'diagram');
 
-  // 77s: GitHub repo homepage + README.
+  // diagram (94.2 → 107.7): scroll to SVG diagram, dwell.
+  await scrollToDiagram(page, 4000);
+  await waitUntil(T.repo.start, 'repo');
+
+  // repo (108.0 → 118.9): GitHub repo homepage + README.
   await page.goto(REPO_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1400);
-  await smoothScrollFull(page, 13500);
+  await sleep(1000);
+  await smoothScrollUntil(page, T.mcp.start, 0.7);
+  await waitUntil(T.mcp.start, 'mcp');
 
-  // 92s: terminal pane for the MCP adapter — long dwell so viewer can read.
+  // mcp (119.2 → 131.1): terminal with npx -y kaizen-mcp (~11.9s).
   await page.goto('data:text/html;charset=utf-8,' + encodeURIComponent(terminalPage()));
-  await sleep(900);
+  await sleep(700);
   await animateTerminal(page);
-  await sleep(8500);
+  await waitUntil(T.scorecard.start, 'scorecard');
 
-  // 107s: scorecard — load then scroll through the full table.
+  // scorecard (131.5 → 140.5): scroll through the SCORECARD.
   await page.goto(SCORECARD_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1200);
-  await smoothScrollFull(page, 13500);
+  await sleep(900);
+  await smoothScrollUntil(page, T.process.start, 1.0);
+  await waitUntil(T.process.start, 'process');
 
-  // 122s: process log — load then scroll through decisions + receipts.
+  // process (140.8 → 149.5): scroll through the PROCESS log.
   await page.goto(PROCESS_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await sleep(1200);
-  await smoothScrollFull(page, 16500);
+  await sleep(900);
+  await smoothScrollUntil(page, T.signoff.start, 1.0);
+  await waitUntil(T.signoff.start, 'signoff');
 
-  console.log('\n  Demo complete.\n');
+  // signoff (149.8 → 154.6): final dwell on PROCESS.
+  await waitUntil(T.signoff.end, 'end');
+
+  console.log(`\n  Demo complete at ${elapsed().toFixed(1)}s.\n`);
   await context.close();
   await browser.close();
 }
 
-async function typeHuman(page, locator, text) {
+async function typeHuman(page, locator, text, baseDelay = 35) {
   for (const char of text) {
-    await locator.type(char, { delay: 35 + Math.random() * 35 });
+    await locator.type(char, { delay: baseDelay + Math.random() * 30 });
   }
 }
 
@@ -134,39 +184,49 @@ async function smoothMoveTo(page, locator) {
   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2, { steps: 25 });
 }
 
-async function smoothScrollFull(page, durationMs) {
+/**
+ * Scroll to bottom, bounded by wall-clock — stops if we've hit `deadlineSec`
+ * on the master timeline. Prevents slow pages from stealing time from the
+ * next beat.
+ */
+async function smoothScrollUntil(page, deadlineSec, scrollFraction = 0.8) {
+  const remainingMs = Math.max(0, (deadlineSec - elapsed()) * 1000);
+  if (remainingMs <= 0) return;
+  const scrollMs = remainingMs * scrollFraction;
   const totalScrollable = await page.evaluate(() => Math.max(0, document.body.scrollHeight - window.innerHeight));
-  if (totalScrollable <= 0) {
-    await sleep(durationMs);
-    return;
-  }
-  const steps = 80;
+  if (totalScrollable <= 0) return;
+  const steps = Math.max(30, Math.floor(scrollMs / 80));
   const stepPx = totalScrollable / steps;
-  const interval = durationMs / steps;
+  const interval = scrollMs / steps;
   for (let i = 0; i < steps; i++) {
+    if (elapsed() * 1000 >= (deadlineSec * 1000 - 200)) break;
     await page.mouse.wheel(0, stepPx);
     await sleep(interval);
   }
 }
 
-async function smoothScrollToDiagram(page, durationMs) {
+async function scrollToDiagram(page, dwellMs) {
   const targetY = await page.evaluate(() => {
     const svg = document.querySelector('svg[aria-label*="architecture"], svg[role="img"], article svg');
     if (!svg) return null;
     const rect = svg.getBoundingClientRect();
     return rect.top + window.scrollY - 120;
   });
-  if (targetY == null || targetY <= 0) {
-    await smoothScrollFull(page, durationMs);
+  if (targetY == null) {
+    await sleep(dwellMs);
     return;
   }
-  const steps = 60;
-  const stepPx = targetY / steps;
-  const interval = durationMs / steps;
+  const scrollMs = 6000;
+  const steps = 80;
+  const currentY = await page.evaluate(() => window.scrollY);
+  const deltaY = targetY - currentY;
+  const stepPx = deltaY / steps;
+  const interval = scrollMs / steps;
   for (let i = 0; i < steps; i++) {
     await page.mouse.wheel(0, stepPx);
     await sleep(interval);
   }
+  await sleep(dwellMs);
 }
 
 function terminalPage() {
@@ -205,29 +265,28 @@ async function animateTerminal(page) {
       .replace(/kaizen-mcp/g, '<span class="sage">kaizen-mcp</span>');
   }, chunk);
 
-  // Type the install command char-by-char so the viewer sees it happen.
   const cmd = 'npx -y kaizen-mcp';
   for (const ch of cmd) {
-    await append(ch === '<' || ch === '>' || ch === '&' ? ch : ch);
-    await sleep(80 + Math.random() * 40);
+    await append(ch);
+    await sleep(90 + Math.random() * 50);
   }
   await append('\n');
-  await sleep(600);
+  await sleep(700);
 
   const lines = [
     { text: '\n', after: 0 },
-    { text: 'kaizen-mcp v0.1.0 listening on stdio\n', after: 600 },
+    { text: 'kaizen-mcp v0.1.0 listening on stdio\n', after: 650 },
     { text: '\n', after: 0 },
     { text: '→ tools/list { count: 4 }\n', after: 450 },
-    { text: '   kaizen_list_charts\n', after: 160 },
-    { text: '   kaizen_get_overview\n', after: 160 },
-    { text: '   kaizen_describe_chart\n', after: 160 },
-    { text: '   kaizen_get_chart\n\n', after: 380 },
-    { text: '→ tools/call kaizen_get_overview\n', after: 500 },
-    { text: '   MRR: $18,422  ·  active subs: 3,417  ·  trials: 194\n\n', after: 600 },
-    { text: '→ tools/call kaizen_describe_chart { chart: "mrr" }\n', after: 500 },
-    { text: '   segments: [ store, product, country, platform ]\n\n', after: 600 },
-    { text: '→ tools/call kaizen_get_chart { chart: "mrr", segment: "store" }\n', after: 500 },
+    { text: '   kaizen_list_charts\n', after: 170 },
+    { text: '   kaizen_get_overview\n', after: 170 },
+    { text: '   kaizen_describe_chart\n', after: 170 },
+    { text: '   kaizen_get_chart\n\n', after: 400 },
+    { text: '→ tools/call kaizen_get_overview\n', after: 550 },
+    { text: '   MRR: $18,422  ·  active subs: 3,417  ·  trials: 194\n\n', after: 700 },
+    { text: '→ tools/call kaizen_describe_chart { chart: "mrr" }\n', after: 550 },
+    { text: '   segments: [ store, product, country, platform ]\n\n', after: 700 },
+    { text: '→ tools/call kaizen_get_chart { chart: "mrr", segment: "store" }\n', after: 550 },
     { text: '   app_store: $12,108  ·  play_store: $6,314\n', after: 300 },
   ];
   for (const line of lines) {
