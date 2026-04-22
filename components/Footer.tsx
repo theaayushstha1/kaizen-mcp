@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 const links = [
-  { href: 'https://github.com/theaayushstha1', label: 'github' },
+  { href: 'https://github.com/theaayushstha1/kaizen-mcp', label: 'repo' },
   { href: '/blog/your-agent-is-a-customer-now', label: 'blog' },
   { href: '/demo', label: 'demo' },
-  { href: 'https://github.com/theaayushstha1/kaizen/blob/main/evals/SCORECARD.md', label: 'scorecard' },
+  { href: 'https://github.com/theaayushstha1/kaizen-mcp/blob/main/evals/SCORECARD.md', label: 'scorecard' },
+  { href: 'https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/PROCESS.md', label: 'process log' },
 ];
 
 export function Footer() {

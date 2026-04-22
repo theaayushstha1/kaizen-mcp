@@ -262,13 +262,19 @@ export default function BlogPost() {
               and interpretation tiers. Current scorecard is published in{' '}
               <Link
                 className="text-ink underline underline-offset-4 decoration-line transition-colors hover:text-sage hover:decoration-sage"
-                href="https://github.com/theaayushstha1/kaizen"
+                href="https://github.com/theaayushstha1/kaizen-mcp/blob/main/evals/SCORECARD.md"
               >
                 SCORECARD.md
               </Link>
               . Cold install to first answer is under sixty seconds. No 429s in a thousand query stress
-              run. The process log with token counts and Claude spend is in{' '}
-              <InlineCode>docs/PROCESS.md</InlineCode>.
+              run. The{' '}
+              <Link
+                className="text-ink underline underline-offset-4 decoration-line transition-colors hover:text-sage hover:decoration-sage"
+                href="https://github.com/theaayushstha1/kaizen-mcp/blob/main/docs/PROCESS.md"
+              >
+                process log
+              </Link>{' '}
+              has token counts, Claude spend, and timestamps for every decision.
             </p>
 
             <h2 className="pt-6 text-xl font-semibold text-ink">Try it</h2>
@@ -277,7 +283,7 @@ export default function BlogPost() {
               The deployed URL is linked from{' '}
               <Link
                 className="text-ink underline underline-offset-4 decoration-line transition-colors hover:text-sage hover:decoration-sage"
-                href="https://github.com/theaayushstha1/kaizen"
+                href="https://github.com/theaayushstha1/kaizen-mcp"
               >
                 the README
               </Link>

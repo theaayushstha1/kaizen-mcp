@@ -23,7 +23,7 @@ Plus a process log demonstrating autonomy, efficiency, and engineering taste.
 | --- | --- |
 | 1. Tool — deployed playground | https://kaizen-silk.vercel.app |
 | 1a. Tool — MCP adapter (stdio) | `pnpm mcp` in the repo — reuses `lib/kaizen/tools.ts`, works in Claude Desktop / Cursor |
-| 2. Tool — source repo | https://github.com/theaayushstha1/kaizen |
+| 2. Tool — source repo | https://github.com/theaayushstha1/kaizen-mcp |
 | 3. Blog post | `/blog/your-agent-is-a-customer-now` on the deployed URL |
 | 4. Video (2 min) | https://www.loom.com/share/<slug> (updated after recording) |
 | 5. Five tweet drafts | [docs/GROWTH.md section 4](docs/GROWTH.md) |
