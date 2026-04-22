@@ -1,0 +1,41 @@
+{
+  "name": "kaizen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kaizen — an AI analyst for RevenueCat's Charts API. Operated by Aayush Shrestha.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint",
+    "probe": "node scripts/probe.mjs",
+    "probe2": "node scripts/probe2.mjs",
+    "eval": "tsx evals/runner.ts",
+    "mcp": "tsx bin/mcp.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^1.2.22",
+    "@ai-sdk/react": "^1.0.0",
+    "@gsap/react": "^2.1.2",
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "ai": "^4.0.0",
+    "gsap": "^3.15.0",
+    "next": "16.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "status": 200,
+  "ms": 932,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "X-Request-Id",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "connection": "keep-alive",
+    "content-encoding": "br",
+    "content-length": "826",
+    "content-type": "application/json",
+    "date": "Wed, 22 Apr 2026 01:55:09 GMT",
+    "revenuecat-rate-limit-current-limit": "15",
+    "revenuecat-rate-limit-current-usage": "12",
+    "server": "envoy",
+    "server-timing": "cdn-upstream-layer;desc=\"EDGE\",cdn-upstream-dns;dur=0,cdn-upstream-connect;dur=0,cdn-upstream-fbl;dur=694,cdn-cache-miss,cdn-pop;desc=\"IAD55-P2\",cdn-rid;desc=\"84m8iKyJj2Crx4sDnjw38RkUmPf_1n0qQ9_ID_1tG27gDw8spsOWiw==\",cdn-downstream-fbl;dur=696",
+    "vary": "Accept-Encoding",
+    "via": "1.1 114d05cae4b477890685343cc9b5a720.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "84m8iKyJj2Crx4sDnjw38RkUmPf_1n0qQ9_ID_1tG27gDw8spsOWiw==",
+    "x-amz-cf-pop": "IAD55-P2",
+    "x-amzn-trace-id": "Root=1-69e82a7c-0ff0024f6abc3ea04bef41e0",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "692",
+    "x-request-id": "65251100-0bc2-4ed7-920f-2d8517db87aa"
+  },
+  "url": "https://api.revenuecat.com/v2/projects/proj058a6330/charts/actives?resolution=day&start_date=2026-03-23&end_date=2026-04-22",
+  "body": {
+    "category": "actives",
+    "description": "Active Subscriptions shows the number of unexpired, paid subscriptions at the end of each period charted.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+    "display_name": "Active Subscriptions",
+    "display_type": "default",
+    "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
+    "end_date": 1776816000,
+    "filtering_allowed": true,
+    "last_computed_at": null,
+    "measures": [
+      {
+        "chartable": true,
+        "decimal_precision": 0,
+        "description": "The number of un-expired subscriptions at the end of the period.",
+        "display_name": "Actives",
+        "tabulable": true,
+        "unit": "#"
+      }
+    ],
+    "object": "chart_data",
+    "resolution": "day",
+    "segmenting_allowed": true,
+    "segments": null,
+    "segments_limit": null,
+    "start_date": 1774224000,
+    "summary": {
+      "average": {
+        "Actives": 2527.97
+      }
+    },
+    "unsupported_params": null,
+    "user_selectors": {},
+    "values": [
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2526
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2530
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2533
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2532
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2532
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2532
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2531
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2530
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2531
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2533
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2532
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2536
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2539
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2536
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2530
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2524
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2521
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2517
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2522
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2521
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2525
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2525
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2519
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2519
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2520
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2520
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2522
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2525
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2530
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 2537
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 0,
+        "value": 2537
+      }
+    ],
+    "yaxis": "#",
+    "yaxis_currency": "USD"
+  }
+}

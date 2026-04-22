@@ -1,0 +1,19 @@
+{
+  "status": 400,
+  "ms": 77,
+  "rateHdrs": {
+    "retry-after": null,
+    "x-ratelimit-limit": null,
+    "x-ratelimit-remaining": null,
+    "x-ratelimit-reset": null
+  },
+  "url": "https://api.revenuecat.com/v2/projects/proj058a6330/charts/actives?resolution=day&start_date=1774230808&end_date=1776822808",
+  "body": {
+    "doc_url": "https://errors.rev.cat/parameter-error",
+    "message": "'1774230808' is not a 'date'",
+    "object": "error",
+    "param": "start_date",
+    "retryable": false,
+    "type": "parameter_error"
+  }
+}

@@ -1,0 +1,1037 @@
+{
+  "status": 200,
+  "ms": 573,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "X-Request-Id",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "connection": "keep-alive",
+    "content-encoding": "br",
+    "content-length": "1537",
+    "content-type": "application/json",
+    "date": "Wed, 22 Apr 2026 01:55:14 GMT",
+    "revenuecat-rate-limit-current-limit": "15",
+    "revenuecat-rate-limit-current-usage": "13",
+    "server": "envoy",
+    "server-timing": "cdn-upstream-layer;desc=\"EDGE\",cdn-upstream-dns;dur=0,cdn-upstream-connect;dur=0,cdn-upstream-fbl;dur=495,cdn-cache-miss,cdn-pop;desc=\"IAD55-P2\",cdn-rid;desc=\"qN4fP__2bPJ716VwT8cA7m8lHZejzLRmMOUi4R2pWNPMv-ToO768XQ==\",cdn-downstream-fbl;dur=498",
+    "vary": "Accept-Encoding",
+    "via": "1.1 f9727388a9890610c008f83558e75e0e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "qN4fP__2bPJ716VwT8cA7m8lHZejzLRmMOUi4R2pWNPMv-ToO768XQ==",
+    "x-amz-cf-pop": "IAD55-P2",
+    "x-amzn-trace-id": "Root=1-69e82a81-75918f6a4196a950296df168",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "493",
+    "x-request-id": "9704ca60-ec7e-42e4-8f22-040f7737fc44"
+  },
+  "url": "https://api.revenuecat.com/v2/projects/proj058a6330/charts/trial_conversion_rate?resolution=day&start_date=2026-03-23&end_date=2026-04-22",
+  "body": {
+    "category": "conversion",
+    "description": "The Trial Conversion Rate chart measures the number of trials that started in a given period, and the portion of them that converted to paying customers.\n\nTrial Conversion Rate is important to track so that you can understand how likelihood to pay changes over time and by various dimensions.\n\nPlease note that the number of Trial Starts reported in each period in this chart will differ from the same period of the Trial Conversion Funnel, since the funnel is cohorted by a customer's first seen date, not by trial start date.",
+    "display_name": "Trial Conversion Rate",
+    "display_type": "default",
+    "documentation_link": "dashboard-and-metrics/charts/trial-conversion-rate-chart",
+    "end_date": 1776816000,
+    "filtering_allowed": true,
+    "last_computed_at": null,
+    "measures": [
+      {
+        "chartable": false,
+        "decimal_precision": 0,
+        "description": "The number of trials started in the period",
+        "display_name": "Trial Starts",
+        "tabulable": true,
+        "unit": "#"
+      },
+      {
+        "chartable": false,
+        "decimal_precision": 0,
+        "description": "The number of trials from the period that have converted to paid, minus those conversions that were later refunded",
+        "display_name": "Conversions",
+        "tabulable": true,
+        "unit": "#"
+      },
+      {
+        "chartable": false,
+        "decimal_precision": 0,
+        "description": "The number of trials from the period that have expired without converting",
+        "display_name": "Expirations",
+        "tabulable": true,
+        "unit": "#"
+      },
+      {
+        "chartable": false,
+        "decimal_precision": 0,
+        "description": "The number of trials from the period that have not yet converted or expired",
+        "display_name": "Pending",
+        "tabulable": true,
+        "unit": "#"
+      },
+      {
+        "chartable": true,
+        "decimal_precision": 1,
+        "description": "The portion of trials that converted to paid",
+        "display_name": "Conversion Rate",
+        "tabulable": true,
+        "unit": "%"
+      }
+    ],
+    "object": "chart_data",
+    "resolution": "day",
+    "segmenting_allowed": true,
+    "segments": null,
+    "segments_limit": null,
+    "start_date": 1774224000,
+    "summary": {
+      "average": {
+        "Conversion Rate": 26.6,
+        "Conversions": 2.55,
+        "Expirations": 4.87,
+        "Pending": 2.16,
+        "Trial Starts": 9.58
+      },
+      "total": {
+        "Conversion Rate": 26.6,
+        "Conversions": 79,
+        "Expirations": 151,
+        "Pending": 67,
+        "Trial Starts": 297
+      }
+    },
+    "unsupported_params": null,
+    "user_selectors": {},
+    "values": [
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 9
+      },
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 7
+      },
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 22.22
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 7
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 3
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 57.14
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 11
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 3
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 8
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 27.27
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 7
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 3
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 4
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 42.86
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 13
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 5
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 8
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 38.46
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 9
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 5
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 44.44
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 5
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 3
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 40
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 8
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 1
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 7
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 12.5
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 12
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 1
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 11
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 8.33
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 14
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 10
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 28.57
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 15
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 11
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 26.67
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 6
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 40
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 9
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 7
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 22.22
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 6
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 40
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 9
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 5
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 44.44
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 6
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 4
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 33.33
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 8
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 20
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 7
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 3
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 57.14
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 2
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 8
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 20
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 13
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 5
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 8
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 38.46
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 14
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 4
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 10
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 28.57
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 5
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 5
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 50
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 12
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 8
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 4
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 66.67
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 16
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 16
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 10
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 10
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 3
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 3,
+        "value": 3
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 8
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 3,
+        "value": 8
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 6
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 3,
+        "value": 6
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 6
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 3,
+        "value": 6
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 18
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 3,
+        "value": 18
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 4,
+        "value": 0
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 0,
+        "value": 0
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 1,
+        "value": 0
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 2,
+        "value": 0
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 3,
+        "value": 0
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 4,
+        "value": 0
+      }
+    ],
+    "yaxis": "%",
+    "yaxis_currency": "USD"
+  }
+}

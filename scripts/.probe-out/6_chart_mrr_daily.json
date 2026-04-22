@@ -1,0 +1,252 @@
+{
+  "status": 200,
+  "ms": 2693,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "X-Request-Id",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "connection": "keep-alive",
+    "content-encoding": "br",
+    "content-length": "1091",
+    "content-type": "application/json",
+    "date": "Wed, 22 Apr 2026 01:55:03 GMT",
+    "revenuecat-rate-limit-current-limit": "15",
+    "revenuecat-rate-limit-current-usage": "11",
+    "server": "envoy",
+    "server-timing": "cdn-upstream-layer;desc=\"EDGE\",cdn-upstream-dns;dur=0,cdn-upstream-connect;dur=0,cdn-upstream-fbl;dur=2380,cdn-cache-miss,cdn-pop;desc=\"IAD55-P2\",cdn-rid;desc=\"tw6yWbydz2Mi8sR0fQS1peGriCjy5mWLZKnaqtWy-H_Gy9StiK3gHw==\",cdn-downstream-fbl;dur=2382",
+    "vary": "Accept-Encoding",
+    "via": "1.1 e71e9c9156db978f5f1b9e1ec8ca9458.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "tw6yWbydz2Mi8sR0fQS1peGriCjy5mWLZKnaqtWy-H_Gy9StiK3gHw==",
+    "x-amz-cf-pop": "IAD55-P2",
+    "x-amzn-trace-id": "Root=1-69e82a75-6d3a0b3919ec51f8608b465d",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "2379",
+    "x-request-id": "e6eb75ee-9793-43e1-ad16-63cb1ec9480f"
+  },
+  "url": "https://api.revenuecat.com/v2/projects/proj058a6330/charts/mrr?resolution=day&start_date=2026-03-23&end_date=2026-04-22",
+  "body": {
+    "category": "revenue",
+    "description": "Monthly Recurring Revenue, or MRR, is a way of normalizing the scale of your business to better understand your velocity or size. It doesn't map directly to revenue, but it is a useful standardization.\n\nMRR is computed by \"normalizing\" subscriptions to a 1-month period. For example, a subscription that is $8 per month, will contribute $8 to MRR while it is active. An annual subscription that costs $120 per year will contribute $10 dollars per month to MRR for 12 months. This normalizing of all durations to a 1 month period makes it easier to compare different subscriptions of different durations together.\n\nMRR is an important measure because it not only captures the size of your subscriber base, but translates that into a real velocity metric for your business. MRR and ARR are considered the standard velocity metrics for subscription software companies.",
+    "display_name": "MRR",
+    "display_type": "default",
+    "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
+    "end_date": 1776816000,
+    "filtering_allowed": true,
+    "last_computed_at": null,
+    "measures": [
+      {
+        "chartable": true,
+        "decimal_precision": 0,
+        "description": "Monthly Recurring Revenue",
+        "display_name": "MRR",
+        "tabulable": true,
+        "unit": "$"
+      }
+    ],
+    "object": "chart_data",
+    "resolution": "day",
+    "segmenting_allowed": true,
+    "segments": null,
+    "segments_limit": null,
+    "start_date": 1774224000,
+    "summary": {
+      "average": {
+        "MRR": 4539.7
+      }
+    },
+    "unsupported_params": null,
+    "user_selectors": {
+      "revenue_type": "revenue"
+    },
+    "values": [
+      {
+        "cohort": 1774224000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4540.62
+      },
+      {
+        "cohort": 1774310400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4550.01
+      },
+      {
+        "cohort": 1774396800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4554.21
+      },
+      {
+        "cohort": 1774483200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4547.8
+      },
+      {
+        "cohort": 1774569600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4549.98
+      },
+      {
+        "cohort": 1774656000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4546.49
+      },
+      {
+        "cohort": 1774742400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4542.92
+      },
+      {
+        "cohort": 1774828800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4539.39
+      },
+      {
+        "cohort": 1774915200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4543.38
+      },
+      {
+        "cohort": 1775001600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4549.05
+      },
+      {
+        "cohort": 1775088000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4548.54
+      },
+      {
+        "cohort": 1775174400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4555.97
+      },
+      {
+        "cohort": 1775260800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4556.52
+      },
+      {
+        "cohort": 1775347200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4547.65
+      },
+      {
+        "cohort": 1775433600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4535.96
+      },
+      {
+        "cohort": 1775520000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4526.15
+      },
+      {
+        "cohort": 1775606400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4522.22
+      },
+      {
+        "cohort": 1775692800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4515.67
+      },
+      {
+        "cohort": 1775779200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4529.18
+      },
+      {
+        "cohort": 1775865600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4527.08
+      },
+      {
+        "cohort": 1775952000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4536.96
+      },
+      {
+        "cohort": 1776038400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4536.1
+      },
+      {
+        "cohort": 1776124800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4522.08
+      },
+      {
+        "cohort": 1776211200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4520.5
+      },
+      {
+        "cohort": 1776297600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4523.55
+      },
+      {
+        "cohort": 1776384000,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4522.36
+      },
+      {
+        "cohort": 1776470400,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4528.18
+      },
+      {
+        "cohort": 1776556800,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4539.9
+      },
+      {
+        "cohort": 1776643200,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4549.42
+      },
+      {
+        "cohort": 1776729600,
+        "incomplete": false,
+        "measure": 0,
+        "value": 4561.17
+      },
+      {
+        "cohort": 1776816000,
+        "incomplete": true,
+        "measure": 0,
+        "value": 4561.75
+      }
+    ],
+    "yaxis": "$",
+    "yaxis_currency": "USD"
+  }
+}

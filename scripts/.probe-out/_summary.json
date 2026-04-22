@@ -1,0 +1,56 @@
+{
+  "projectId": "proj058a6330",
+  "valid": [
+    "actives",
+    "mrr",
+    "arr",
+    "revenue",
+    "churn",
+    "trial_conversion_rate",
+    "conversion_to_paying",
+    "cohort_explorer",
+    "ltv_per_customer",
+    "ltv_per_paying_customer",
+    "actives_movement",
+    "mrr_movement"
+  ],
+  "invalid": [
+    {
+      "name": "active_subscriptions",
+      "status": 400
+    },
+    {
+      "name": "subscribers",
+      "status": 400
+    },
+    {
+      "name": "new_customers",
+      "status": 400
+    },
+    {
+      "name": "subscriber_lifetime_value",
+      "status": 400
+    },
+    {
+      "name": "refunds",
+      "status": 400
+    },
+    {
+      "name": "transactions",
+      "status": 400
+    },
+    {
+      "name": "initial_conversion",
+      "status": 400
+    },
+    {
+      "name": "revenue_churn",
+      "status": 400
+    }
+  ],
+  "sampled": [
+    "actives",
+    "mrr",
+    "arr"
+  ]
+}

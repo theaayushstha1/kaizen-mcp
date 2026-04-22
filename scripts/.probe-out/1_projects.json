@@ -1,0 +1,26 @@
+{
+  "status": 200,
+  "ms": 528,
+  "rateHdrs": {
+    "retry-after": null,
+    "x-ratelimit-limit": null,
+    "x-ratelimit-remaining": null,
+    "x-ratelimit-reset": null
+  },
+  "url": "https://api.revenuecat.com/v2/projects",
+  "body": {
+    "items": [
+      {
+        "created_at": 1670683245590,
+        "icon_url": "https://www.appatar.io/com.charliemchapman.dark-noise/small",
+        "icon_url_large": "https://www.appatar.io/com.charliemchapman.dark-noise/large",
+        "id": "proj058a6330",
+        "name": "Dark Noise",
+        "object": "project"
+      }
+    ],
+    "next_page": null,
+    "object": "list",
+    "url": "https://api.revenuecat.com/v2/projects"
+  }
+}

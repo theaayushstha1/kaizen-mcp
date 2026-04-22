@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #fafaf7;
+  color: #14181a;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: #e8efe6;
+  color: #14181a;
+}
+
+.prose {
+  max-width: 62ch;
+}
+.prose p {
+  margin: 0 0 12px;
+}
+.prose p:last-child {
+  margin-bottom: 0;
+}
+.prose ul {
+  margin: 0 0 12px;
+  padding-left: 0;
+  list-style: none;
+}
+.prose ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+.prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #6b8f71;
+  border-radius: 1px;
+}
+.prose ol {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+.prose ol li {
+  margin-bottom: 6px;
+}
+.prose ol li::marker {
+  color: #6c7075;
+}
+.prose a {
+  color: #14181a;
+  text-decoration: underline;
+  text-decoration-color: #e6e6e1;
+  text-underline-offset: 4px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+.prose a:hover {
+  color: #6b8f71;
+  text-decoration-color: #6b8f71;
+}
+.prose code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 12.5px;
+  background: #fafaf7;
+  border: 1px solid #e6e6e1;
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: #14181a;
+}
+.prose strong {
+  font-weight: 600;
+  color: #14181a;
+}
+.prose em {
+  font-style: italic;
+}
+
+/* Reasoning trace collapse (§9.6) */
+.trace-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease-out;
+}
+.trace-body.open {
+  /* max-height set inline to scrollHeight */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

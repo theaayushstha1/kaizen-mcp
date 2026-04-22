@@ -1,0 +1,1963 @@
+{
+  "status": 200,
+  "ms": 249,
+  "rateHdrs": {
+    "retry-after": null,
+    "x-ratelimit-limit": null,
+    "x-ratelimit-remaining": null,
+    "x-ratelimit-reset": null
+  },
+  "url": "https://api.revenuecat.com/v2/projects/proj058a6330/charts/revenue/options",
+  "body": {
+    "filters": [
+      {
+        "display_name": "Store",
+        "group_display_name": "default",
+        "id": "store",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "App Store",
+            "id": "app_store"
+          },
+          {
+            "display_name": "Play Store",
+            "id": "play_store"
+          },
+          {
+            "display_name": "Mac App Store",
+            "id": "mac_app_store"
+          },
+          {
+            "display_name": "Stripe",
+            "id": "stripe"
+          },
+          {
+            "display_name": "Amazon Store",
+            "id": "amazon"
+          },
+          {
+            "display_name": "External",
+            "id": "external"
+          },
+          {
+            "display_name": "Web Billing",
+            "id": "rc_billing"
+          },
+          {
+            "display_name": "Roku",
+            "id": "roku"
+          },
+          {
+            "display_name": "Paddle",
+            "id": "paddle"
+          }
+        ]
+      },
+      {
+        "display_name": "Platform",
+        "group_display_name": "default",
+        "id": "platform",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Android",
+            "id": "Android"
+          },
+          {
+            "display_name": "tvOS",
+            "id": "tvOS"
+          },
+          {
+            "display_name": "watchOS",
+            "id": "watchOS"
+          },
+          {
+            "display_name": "visionOS",
+            "id": "visionOS"
+          },
+          {
+            "display_name": "iOS",
+            "id": "iOS"
+          },
+          {
+            "display_name": "macOS",
+            "id": "macOS"
+          },
+          {
+            "display_name": "Web",
+            "id": "Web"
+          },
+          {
+            "display_name": "Roku",
+            "id": "Roku"
+          },
+          {
+            "display_name": "Other",
+            "id": "Other"
+          }
+        ]
+      },
+      {
+        "display_name": "App",
+        "group_display_name": "default",
+        "id": "app_id",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Dark Noise (App Store)",
+            "id": "app439edd9419"
+          },
+          {
+            "display_name": "Test Store (Test Store)",
+            "id": "app5c28ec8501"
+          }
+        ]
+      },
+      {
+        "display_name": "Product",
+        "group_display_name": "default",
+        "id": "product_id",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "dn_1999_1y_7d0",
+            "id": "prode528fc2be6"
+          },
+          {
+            "display_name": "dn_299_1m",
+            "id": "prod878a8c626a"
+          },
+          {
+            "display_name": "dn_1999_1y_1w0",
+            "id": "prod7aa7306d1c"
+          },
+          {
+            "display_name": "dn_299_1m",
+            "id": "prod5cb1f55955"
+          },
+          {
+            "display_name": "dn_4999_lifetime",
+            "id": "prodda7e97269c"
+          },
+          {
+            "display_name": "dn_1999_1y_3d0",
+            "id": "prodc1ea07a955"
+          },
+          {
+            "display_name": "dn_4999_lifetime",
+            "id": "prod16ae1d7b54"
+          }
+        ]
+      },
+      {
+        "display_name": "Offering",
+        "group_display_name": "default",
+        "id": "offering_identifier",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "The standard set of packages",
+            "id": "ofrng1dc6ec1e86"
+          },
+          {
+            "display_name": "Enables the new RC Paywalls configured in RC.",
+            "id": "ofrng5439fb67ac"
+          },
+          {
+            "display_name": "Shows all plans in the paywall footer by default instead of using the condensed footer.",
+            "id": "ofrng932ffe11f9"
+          },
+          {
+            "display_name": "Sale paywall for Black Friday 2023",
+            "id": "ofrng2b3111dfa2"
+          },
+          {
+            "display_name": "Switches trial to 7 days instead of the default 3",
+            "id": "ofrngb07a8156af"
+          },
+          {
+            "display_name": "Testing a paywall using the trial explanation style",
+            "id": "ofrng7af8938b8c"
+          },
+          {
+            "display_name": "Test of Paywalls V2",
+            "id": "ofrng978c012b97"
+          },
+          {
+            "display_name": "Testing new paywall with comparison table",
+            "id": "ofrng4e43d23ac9"
+          },
+          {
+            "display_name": "Test of full RC Paywall with Carousel and Show all Plans popup",
+            "id": "ofrng83e7b62edc"
+          },
+          {
+            "display_name": "Paywall V2 - 01",
+            "id": "ofrng19b3f7468e"
+          },
+          {
+            "display_name": "Social Proof Paywall Test",
+            "id": "ofrng0e15801521"
+          },
+          {
+            "display_name": "All Plans Paywall Test",
+            "id": "ofrng657671eb1e"
+          },
+          {
+            "display_name": "Josh Debug",
+            "id": "ofrng40fa03aefb"
+          },
+          {
+            "display_name": "Black Friday 2025",
+            "id": "ofrngcf4634902c"
+          },
+          {
+            "display_name": "Standard set of 3 products",
+            "id": "ofrng1504cb8542"
+          }
+        ]
+      },
+      {
+        "display_name": "Country",
+        "group_display_name": "default",
+        "id": "country",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Unknown",
+            "id": "unknown"
+          },
+          {
+            "display_name": "Afghanistan",
+            "id": "AF"
+          },
+          {
+            "display_name": "Albania",
+            "id": "AL"
+          },
+          {
+            "display_name": "Algeria",
+            "id": "DZ"
+          },
+          {
+            "display_name": "American Samoa",
+            "id": "AS"
+          },
+          {
+            "display_name": "Andorra",
+            "id": "AD"
+          },
+          {
+            "display_name": "Angola",
+            "id": "AO"
+          },
+          {
+            "display_name": "Anguilla",
+            "id": "AI"
+          },
+          {
+            "display_name": "Antarctica",
+            "id": "AQ"
+          },
+          {
+            "display_name": "Antigua and Barbuda",
+            "id": "AG"
+          },
+          {
+            "display_name": "Argentina",
+            "id": "AR"
+          },
+          {
+            "display_name": "Armenia",
+            "id": "AM"
+          },
+          {
+            "display_name": "Aruba",
+            "id": "AW"
+          },
+          {
+            "display_name": "Australia",
+            "id": "AU"
+          },
+          {
+            "display_name": "Austria",
+            "id": "AT"
+          },
+          {
+            "display_name": "Azerbaijan",
+            "id": "AZ"
+          },
+          {
+            "display_name": "Bahamas",
+            "id": "BS"
+          },
+          {
+            "display_name": "Bahrain",
+            "id": "BH"
+          },
+          {
+            "display_name": "Bangladesh",
+            "id": "BD"
+          },
+          {
+            "display_name": "Barbados",
+            "id": "BB"
+          },
+          {
+            "display_name": "Belarus",
+            "id": "BY"
+          },
+          {
+            "display_name": "Belgium",
+            "id": "BE"
+          },
+          {
+            "display_name": "Belize",
+            "id": "BZ"
+          },
+          {
+            "display_name": "Benin",
+            "id": "BJ"
+          },
+          {
+            "display_name": "Bermuda",
+            "id": "BM"
+          },
+          {
+            "display_name": "Bhutan",
+            "id": "BT"
+          },
+          {
+            "display_name": "Bolivia",
+            "id": "BO"
+          },
+          {
+            "display_name": "Bonaire, Sint Eustatius and Saba",
+            "id": "BQ"
+          },
+          {
+            "display_name": "Bosnia and Herzegovina",
+            "id": "BA"
+          },
+          {
+            "display_name": "Botswana",
+            "id": "BW"
+          },
+          {
+            "display_name": "Bouvet Island",
+            "id": "BV"
+          },
+          {
+            "display_name": "Brazil",
+            "id": "BR"
+          },
+          {
+            "display_name": "British Indian Ocean Territory",
+            "id": "IO"
+          },
+          {
+            "display_name": "Brunei Darussalam",
+            "id": "BN"
+          },
+          {
+            "display_name": "Bulgaria",
+            "id": "BG"
+          },
+          {
+            "display_name": "Burkina Faso",
+            "id": "BF"
+          },
+          {
+            "display_name": "Burundi",
+            "id": "BI"
+          },
+          {
+            "display_name": "Cabo Verde",
+            "id": "CV"
+          },
+          {
+            "display_name": "Cambodia",
+            "id": "KH"
+          },
+          {
+            "display_name": "Cameroon",
+            "id": "CM"
+          },
+          {
+            "display_name": "Canada",
+            "id": "CA"
+          },
+          {
+            "display_name": "Cayman Islands",
+            "id": "KY"
+          },
+          {
+            "display_name": "Central African Republic",
+            "id": "CF"
+          },
+          {
+            "display_name": "Chad",
+            "id": "TD"
+          },
+          {
+            "display_name": "Chile",
+            "id": "CL"
+          },
+          {
+            "display_name": "China",
+            "id": "CN"
+          },
+          {
+            "display_name": "Christmas Island",
+            "id": "CX"
+          },
+          {
+            "display_name": "Cocos (Keeling) Islands",
+            "id": "CC"
+          },
+          {
+            "display_name": "Colombia",
+            "id": "CO"
+          },
+          {
+            "display_name": "Comoros",
+            "id": "KM"
+          },
+          {
+            "display_name": "Congo",
+            "id": "CG"
+          },
+          {
+            "display_name": "Congo, The Democratic Republic of the",
+            "id": "CD"
+          },
+          {
+            "display_name": "Cook Islands",
+            "id": "CK"
+          },
+          {
+            "display_name": "Costa Rica",
+            "id": "CR"
+          },
+          {
+            "display_name": "Croatia",
+            "id": "HR"
+          },
+          {
+            "display_name": "Cuba",
+            "id": "CU"
+          },
+          {
+            "display_name": "Curaçao",
+            "id": "CW"
+          },
+          {
+            "display_name": "Cyprus",
+            "id": "CY"
+          },
+          {
+            "display_name": "Czechia",
+            "id": "CZ"
+          },
+          {
+            "display_name": "Côte d'Ivoire",
+            "id": "CI"
+          },
+          {
+            "display_name": "Denmark",
+            "id": "DK"
+          },
+          {
+            "display_name": "Djibouti",
+            "id": "DJ"
+          },
+          {
+            "display_name": "Dominica",
+            "id": "DM"
+          },
+          {
+            "display_name": "Dominican Republic",
+            "id": "DO"
+          },
+          {
+            "display_name": "Ecuador",
+            "id": "EC"
+          },
+          {
+            "display_name": "Egypt",
+            "id": "EG"
+          },
+          {
+            "display_name": "El Salvador",
+            "id": "SV"
+          },
+          {
+            "display_name": "Equatorial Guinea",
+            "id": "GQ"
+          },
+          {
+            "display_name": "Eritrea",
+            "id": "ER"
+          },
+          {
+            "display_name": "Estonia",
+            "id": "EE"
+          },
+          {
+            "display_name": "Eswatini",
+            "id": "SZ"
+          },
+          {
+            "display_name": "Ethiopia",
+            "id": "ET"
+          },
+          {
+            "display_name": "Falkland Islands (Malvinas)",
+            "id": "FK"
+          },
+          {
+            "display_name": "Faroe Islands",
+            "id": "FO"
+          },
+          {
+            "display_name": "Fiji",
+            "id": "FJ"
+          },
+          {
+            "display_name": "Finland",
+            "id": "FI"
+          },
+          {
+            "display_name": "France",
+            "id": "FR"
+          },
+          {
+            "display_name": "French Guiana",
+            "id": "GF"
+          },
+          {
+            "display_name": "French Polynesia",
+            "id": "PF"
+          },
+          {
+            "display_name": "French Southern Territories",
+            "id": "TF"
+          },
+          {
+            "display_name": "Gabon",
+            "id": "GA"
+          },
+          {
+            "display_name": "Gambia",
+            "id": "GM"
+          },
+          {
+            "display_name": "Georgia",
+            "id": "GE"
+          },
+          {
+            "display_name": "Germany",
+            "id": "DE"
+          },
+          {
+            "display_name": "Ghana",
+            "id": "GH"
+          },
+          {
+            "display_name": "Gibraltar",
+            "id": "GI"
+          },
+          {
+            "display_name": "Greece",
+            "id": "GR"
+          },
+          {
+            "display_name": "Greenland",
+            "id": "GL"
+          },
+          {
+            "display_name": "Grenada",
+            "id": "GD"
+          },
+          {
+            "display_name": "Guadeloupe",
+            "id": "GP"
+          },
+          {
+            "display_name": "Guam",
+            "id": "GU"
+          },
+          {
+            "display_name": "Guatemala",
+            "id": "GT"
+          },
+          {
+            "display_name": "Guernsey",
+            "id": "GG"
+          },
+          {
+            "display_name": "Guinea",
+            "id": "GN"
+          },
+          {
+            "display_name": "Guinea-Bissau",
+            "id": "GW"
+          },
+          {
+            "display_name": "Guyana",
+            "id": "GY"
+          },
+          {
+            "display_name": "Haiti",
+            "id": "HT"
+          },
+          {
+            "display_name": "Heard Island and McDonald Islands",
+            "id": "HM"
+          },
+          {
+            "display_name": "Holy See (Vatican City State)",
+            "id": "VA"
+          },
+          {
+            "display_name": "Honduras",
+            "id": "HN"
+          },
+          {
+            "display_name": "Hong Kong",
+            "id": "HK"
+          },
+          {
+            "display_name": "Hungary",
+            "id": "HU"
+          },
+          {
+            "display_name": "Iceland",
+            "id": "IS"
+          },
+          {
+            "display_name": "India",
+            "id": "IN"
+          },
+          {
+            "display_name": "Indonesia",
+            "id": "ID"
+          },
+          {
+            "display_name": "Iran, Islamic Republic of",
+            "id": "IR"
+          },
+          {
+            "display_name": "Iraq",
+            "id": "IQ"
+          },
+          {
+            "display_name": "Ireland",
+            "id": "IE"
+          },
+          {
+            "display_name": "Isle of Man",
+            "id": "IM"
+          },
+          {
+            "display_name": "Israel",
+            "id": "IL"
+          },
+          {
+            "display_name": "Italy",
+            "id": "IT"
+          },
+          {
+            "display_name": "Jamaica",
+            "id": "JM"
+          },
+          {
+            "display_name": "Japan",
+            "id": "JP"
+          },
+          {
+            "display_name": "Jersey",
+            "id": "JE"
+          },
+          {
+            "display_name": "Jordan",
+            "id": "JO"
+          },
+          {
+            "display_name": "Kazakhstan",
+            "id": "KZ"
+          },
+          {
+            "display_name": "Kenya",
+            "id": "KE"
+          },
+          {
+            "display_name": "Kiribati",
+            "id": "KI"
+          },
+          {
+            "display_name": "North Korea",
+            "id": "KP"
+          },
+          {
+            "display_name": "South Korea",
+            "id": "KR"
+          },
+          {
+            "display_name": "Kosovo",
+            "id": "XK"
+          },
+          {
+            "display_name": "Kuwait",
+            "id": "KW"
+          },
+          {
+            "display_name": "Kyrgyzstan",
+            "id": "KG"
+          },
+          {
+            "display_name": "Lao People's Democratic Republic",
+            "id": "LA"
+          },
+          {
+            "display_name": "Latvia",
+            "id": "LV"
+          },
+          {
+            "display_name": "Lebanon",
+            "id": "LB"
+          },
+          {
+            "display_name": "Lesotho",
+            "id": "LS"
+          },
+          {
+            "display_name": "Liberia",
+            "id": "LR"
+          },
+          {
+            "display_name": "Libya",
+            "id": "LY"
+          },
+          {
+            "display_name": "Liechtenstein",
+            "id": "LI"
+          },
+          {
+            "display_name": "Lithuania",
+            "id": "LT"
+          },
+          {
+            "display_name": "Luxembourg",
+            "id": "LU"
+          },
+          {
+            "display_name": "Macao",
+            "id": "MO"
+          },
+          {
+            "display_name": "Madagascar",
+            "id": "MG"
+          },
+          {
+            "display_name": "Malawi",
+            "id": "MW"
+          },
+          {
+            "display_name": "Malaysia",
+            "id": "MY"
+          },
+          {
+            "display_name": "Maldives",
+            "id": "MV"
+          },
+          {
+            "display_name": "Mali",
+            "id": "ML"
+          },
+          {
+            "display_name": "Malta",
+            "id": "MT"
+          },
+          {
+            "display_name": "Marshall Islands",
+            "id": "MH"
+          },
+          {
+            "display_name": "Martinique",
+            "id": "MQ"
+          },
+          {
+            "display_name": "Mauritania",
+            "id": "MR"
+          },
+          {
+            "display_name": "Mauritius",
+            "id": "MU"
+          },
+          {
+            "display_name": "Mayotte",
+            "id": "YT"
+          },
+          {
+            "display_name": "Mexico",
+            "id": "MX"
+          },
+          {
+            "display_name": "Micronesia, Federated States of",
+            "id": "FM"
+          },
+          {
+            "display_name": "Moldova",
+            "id": "MD"
+          },
+          {
+            "display_name": "Monaco",
+            "id": "MC"
+          },
+          {
+            "display_name": "Mongolia",
+            "id": "MN"
+          },
+          {
+            "display_name": "Montenegro",
+            "id": "ME"
+          },
+          {
+            "display_name": "Montserrat",
+            "id": "MS"
+          },
+          {
+            "display_name": "Morocco",
+            "id": "MA"
+          },
+          {
+            "display_name": "Mozambique",
+            "id": "MZ"
+          },
+          {
+            "display_name": "Myanmar",
+            "id": "MM"
+          },
+          {
+            "display_name": "Namibia",
+            "id": "NA"
+          },
+          {
+            "display_name": "Nauru",
+            "id": "NR"
+          },
+          {
+            "display_name": "Nepal",
+            "id": "NP"
+          },
+          {
+            "display_name": "Netherlands",
+            "id": "NL"
+          },
+          {
+            "display_name": "New Caledonia",
+            "id": "NC"
+          },
+          {
+            "display_name": "New Zealand",
+            "id": "NZ"
+          },
+          {
+            "display_name": "Nicaragua",
+            "id": "NI"
+          },
+          {
+            "display_name": "Niger",
+            "id": "NE"
+          },
+          {
+            "display_name": "Nigeria",
+            "id": "NG"
+          },
+          {
+            "display_name": "Niue",
+            "id": "NU"
+          },
+          {
+            "display_name": "Norfolk Island",
+            "id": "NF"
+          },
+          {
+            "display_name": "North Macedonia",
+            "id": "MK"
+          },
+          {
+            "display_name": "Northern Mariana Islands",
+            "id": "MP"
+          },
+          {
+            "display_name": "Norway",
+            "id": "NO"
+          },
+          {
+            "display_name": "Oman",
+            "id": "OM"
+          },
+          {
+            "display_name": "Pakistan",
+            "id": "PK"
+          },
+          {
+            "display_name": "Palau",
+            "id": "PW"
+          },
+          {
+            "display_name": "Palestine, State of",
+            "id": "PS"
+          },
+          {
+            "display_name": "Panama",
+            "id": "PA"
+          },
+          {
+            "display_name": "Papua New Guinea",
+            "id": "PG"
+          },
+          {
+            "display_name": "Paraguay",
+            "id": "PY"
+          },
+          {
+            "display_name": "Peru",
+            "id": "PE"
+          },
+          {
+            "display_name": "Philippines",
+            "id": "PH"
+          },
+          {
+            "display_name": "Pitcairn",
+            "id": "PN"
+          },
+          {
+            "display_name": "Poland",
+            "id": "PL"
+          },
+          {
+            "display_name": "Portugal",
+            "id": "PT"
+          },
+          {
+            "display_name": "Puerto Rico",
+            "id": "PR"
+          },
+          {
+            "display_name": "Qatar",
+            "id": "QA"
+          },
+          {
+            "display_name": "Romania",
+            "id": "RO"
+          },
+          {
+            "display_name": "Russian Federation",
+            "id": "RU"
+          },
+          {
+            "display_name": "Rwanda",
+            "id": "RW"
+          },
+          {
+            "display_name": "Réunion",
+            "id": "RE"
+          },
+          {
+            "display_name": "Saint Barthélemy",
+            "id": "BL"
+          },
+          {
+            "display_name": "Saint Helena, Ascension and Tristan da Cunha",
+            "id": "SH"
+          },
+          {
+            "display_name": "Saint Kitts and Nevis",
+            "id": "KN"
+          },
+          {
+            "display_name": "Saint Lucia",
+            "id": "LC"
+          },
+          {
+            "display_name": "Saint Martin (French part)",
+            "id": "MF"
+          },
+          {
+            "display_name": "Saint Pierre and Miquelon",
+            "id": "PM"
+          },
+          {
+            "display_name": "Saint Vincent and the Grenadines",
+            "id": "VC"
+          },
+          {
+            "display_name": "Samoa",
+            "id": "WS"
+          },
+          {
+            "display_name": "San Marino",
+            "id": "SM"
+          },
+          {
+            "display_name": "Sao Tome and Principe",
+            "id": "ST"
+          },
+          {
+            "display_name": "Saudi Arabia",
+            "id": "SA"
+          },
+          {
+            "display_name": "Senegal",
+            "id": "SN"
+          },
+          {
+            "display_name": "Serbia",
+            "id": "RS"
+          },
+          {
+            "display_name": "Seychelles",
+            "id": "SC"
+          },
+          {
+            "display_name": "Sierra Leone",
+            "id": "SL"
+          },
+          {
+            "display_name": "Singapore",
+            "id": "SG"
+          },
+          {
+            "display_name": "Sint Maarten (Dutch part)",
+            "id": "SX"
+          },
+          {
+            "display_name": "Slovakia",
+            "id": "SK"
+          },
+          {
+            "display_name": "Slovenia",
+            "id": "SI"
+          },
+          {
+            "display_name": "Solomon Islands",
+            "id": "SB"
+          },
+          {
+            "display_name": "Somalia",
+            "id": "SO"
+          },
+          {
+            "display_name": "South Africa",
+            "id": "ZA"
+          },
+          {
+            "display_name": "South Georgia and the South Sandwich Islands",
+            "id": "GS"
+          },
+          {
+            "display_name": "South Sudan",
+            "id": "SS"
+          },
+          {
+            "display_name": "Spain",
+            "id": "ES"
+          },
+          {
+            "display_name": "Sri Lanka",
+            "id": "LK"
+          },
+          {
+            "display_name": "Sudan",
+            "id": "SD"
+          },
+          {
+            "display_name": "Suriname",
+            "id": "SR"
+          },
+          {
+            "display_name": "Svalbard and Jan Mayen",
+            "id": "SJ"
+          },
+          {
+            "display_name": "Sweden",
+            "id": "SE"
+          },
+          {
+            "display_name": "Switzerland",
+            "id": "CH"
+          },
+          {
+            "display_name": "Syrian Arab Republic",
+            "id": "SY"
+          },
+          {
+            "display_name": "Taiwan",
+            "id": "TW"
+          },
+          {
+            "display_name": "Tajikistan",
+            "id": "TJ"
+          },
+          {
+            "display_name": "Tanzania",
+            "id": "TZ"
+          },
+          {
+            "display_name": "Thailand",
+            "id": "TH"
+          },
+          {
+            "display_name": "Timor-Leste",
+            "id": "TL"
+          },
+          {
+            "display_name": "Togo",
+            "id": "TG"
+          },
+          {
+            "display_name": "Tokelau",
+            "id": "TK"
+          },
+          {
+            "display_name": "Tonga",
+            "id": "TO"
+          },
+          {
+            "display_name": "Trinidad and Tobago",
+            "id": "TT"
+          },
+          {
+            "display_name": "Tunisia",
+            "id": "TN"
+          },
+          {
+            "display_name": "Turkey",
+            "id": "TR"
+          },
+          {
+            "display_name": "Turkmenistan",
+            "id": "TM"
+          },
+          {
+            "display_name": "Turks and Caicos Islands",
+            "id": "TC"
+          },
+          {
+            "display_name": "Tuvalu",
+            "id": "TV"
+          },
+          {
+            "display_name": "Uganda",
+            "id": "UG"
+          },
+          {
+            "display_name": "Ukraine",
+            "id": "UA"
+          },
+          {
+            "display_name": "United Arab Emirates",
+            "id": "AE"
+          },
+          {
+            "display_name": "United Kingdom",
+            "id": "GB"
+          },
+          {
+            "display_name": "United States",
+            "id": "US"
+          },
+          {
+            "display_name": "United States Minor Outlying Islands",
+            "id": "UM"
+          },
+          {
+            "display_name": "Uruguay",
+            "id": "UY"
+          },
+          {
+            "display_name": "Uzbekistan",
+            "id": "UZ"
+          },
+          {
+            "display_name": "Vanuatu",
+            "id": "VU"
+          },
+          {
+            "display_name": "Venezuela",
+            "id": "VE"
+          },
+          {
+            "display_name": "Vietnam",
+            "id": "VN"
+          },
+          {
+            "display_name": "Virgin Islands, British",
+            "id": "VG"
+          },
+          {
+            "display_name": "Virgin Islands, U.S.",
+            "id": "VI"
+          },
+          {
+            "display_name": "Wallis and Futuna",
+            "id": "WF"
+          },
+          {
+            "display_name": "Western Sahara",
+            "id": "EH"
+          },
+          {
+            "display_name": "Yemen",
+            "id": "YE"
+          },
+          {
+            "display_name": "Zambia",
+            "id": "ZM"
+          },
+          {
+            "display_name": "Zimbabwe",
+            "id": "ZW"
+          },
+          {
+            "display_name": "Åland Islands",
+            "id": "AX"
+          }
+        ]
+      },
+      {
+        "display_name": "Apple Search Ads Claim Type",
+        "group_display_name": "default",
+        "id": "apple_attribution_claim_type",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Click",
+            "id": "Click"
+          },
+          {
+            "display_name": "Impression",
+            "id": "Impression"
+          },
+          {
+            "display_name": "Organic",
+            "id": "Organic"
+          }
+        ]
+      },
+      {
+        "display_name": "Transaction type",
+        "group_display_name": "default",
+        "id": "transaction_type",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "New",
+            "id": "New"
+          },
+          {
+            "display_name": "Renewal",
+            "id": "Renewal"
+          },
+          {
+            "display_name": "Resubscription",
+            "id": "Resubscription"
+          },
+          {
+            "display_name": "Product Change",
+            "id": "Product Change"
+          }
+        ]
+      },
+      {
+        "display_name": "Renewal Cycle",
+        "group_display_name": "default",
+        "id": "subscription_renewal_cycle_group",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Cycle 0",
+            "id": "Cycle 0"
+          },
+          {
+            "display_name": "Cycle 1",
+            "id": "Cycle 1"
+          },
+          {
+            "display_name": "Cycle 2",
+            "id": "Cycle 2"
+          },
+          {
+            "display_name": "Cycle 3",
+            "id": "Cycle 3"
+          },
+          {
+            "display_name": "Cycle 4",
+            "id": "Cycle 4"
+          },
+          {
+            "display_name": "Cycle 5+",
+            "id": "Cycle 5+"
+          }
+        ]
+      },
+      {
+        "display_name": "Offering",
+        "group_display_name": "default",
+        "id": "offering_identifier",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No offering",
+            "id": "No offering"
+          },
+          {
+            "display_name": "The standard set of packages",
+            "id": "default"
+          },
+          {
+            "display_name": "Enables the new RC Paywalls configured in RC.",
+            "id": "Using RC Paywalls"
+          },
+          {
+            "display_name": "Shows all plans in the paywall footer by default instead of using the condensed footer.",
+            "id": "Show All Plans"
+          },
+          {
+            "display_name": "Sale paywall for Black Friday 2023",
+            "id": "Black Friday 2023 Sale"
+          },
+          {
+            "display_name": "Switches trial to 7 days instead of the default 3",
+            "id": "7 Day Trial"
+          },
+          {
+            "display_name": "Testing a paywall using the trial explanation style",
+            "id": "trial-style-paywall"
+          },
+          {
+            "display_name": "Test of Paywalls V2",
+            "id": "paywall-v2"
+          },
+          {
+            "display_name": "Testing new paywall with comparison table",
+            "id": "comparison-table-paywall"
+          },
+          {
+            "display_name": "Test of full RC Paywall with Carousel and Show all Plans popup",
+            "id": "Carousel"
+          },
+          {
+            "display_name": "Paywall V2 - 01",
+            "id": "paywall-v2-01"
+          },
+          {
+            "display_name": "Social Proof Paywall Test",
+            "id": "paywall-v2-test-1"
+          },
+          {
+            "display_name": "All Plans Paywall Test",
+            "id": "paywall-v2-test-02"
+          },
+          {
+            "display_name": "Josh Debug",
+            "id": "josh-debug"
+          },
+          {
+            "display_name": "Black Friday 2025",
+            "id": "black-friday-2025"
+          },
+          {
+            "display_name": "Standard set of 3 products",
+            "id": "social-proof-all-products-02"
+          }
+        ]
+      },
+      {
+        "display_name": "Offer type",
+        "group_display_name": "default",
+        "id": "offer_type",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No offer",
+            "id": "No offer"
+          },
+          {
+            "display_name": "Free trial",
+            "id": "free_trial"
+          },
+          {
+            "display_name": "Introductory offer",
+            "id": "introductory_offer"
+          },
+          {
+            "display_name": "Offer code",
+            "id": "offer_code"
+          },
+          {
+            "display_name": "Promotional offer",
+            "id": "promotional_offer"
+          },
+          {
+            "display_name": "Win back offer",
+            "id": "win_back_offer"
+          },
+          {
+            "display_name": "Unspecified offer",
+            "id": "unspecified_offer"
+          }
+        ]
+      },
+      {
+        "display_name": "Product duration",
+        "group_display_name": "default",
+        "id": "product_duration",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Unknown",
+            "id": "Unknown"
+          },
+          {
+            "display_name": "Daily",
+            "id": "P1D"
+          },
+          {
+            "display_name": "Three day",
+            "id": "P3D"
+          },
+          {
+            "display_name": "Weekly",
+            "id": "P1W"
+          },
+          {
+            "display_name": "Two week",
+            "id": "P2W"
+          },
+          {
+            "display_name": "Monthly",
+            "id": "P1M"
+          },
+          {
+            "display_name": "Two month",
+            "id": "P2M"
+          },
+          {
+            "display_name": "Three month",
+            "id": "P3M"
+          },
+          {
+            "display_name": "Six month",
+            "id": "P6M"
+          },
+          {
+            "display_name": "Yearly",
+            "id": "P1Y"
+          },
+          {
+            "display_name": "Lifetime",
+            "id": "P200Y"
+          }
+        ]
+      },
+      {
+        "display_name": "Custom attributes",
+        "group_display_name": "default",
+        "id": "external_subscriber_attributes",
+        "object": "chart_filter_option",
+        "options": []
+      },
+      {
+        "display_name": "App version",
+        "group_display_name": "default",
+        "id": "app_version",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "1.0",
+            "id": "1.0"
+          },
+          {
+            "display_name": "1.2",
+            "id": "1.2"
+          },
+          {
+            "display_name": "2.7.5",
+            "id": "2.7.5"
+          },
+          {
+            "display_name": "3.0.0",
+            "id": "3.0.0"
+          },
+          {
+            "display_name": "3.1.0",
+            "id": "3.1.0"
+          },
+          {
+            "display_name": "3.1.1",
+            "id": "3.1.1"
+          },
+          {
+            "display_name": "3.1.2",
+            "id": "3.1.2"
+          },
+          {
+            "display_name": "3.1.3",
+            "id": "3.1.3"
+          },
+          {
+            "display_name": "3.2.0",
+            "id": "3.2.0"
+          },
+          {
+            "display_name": "3.2.1",
+            "id": "3.2.1"
+          },
+          {
+            "display_name": "3.2.2",
+            "id": "3.2.2"
+          },
+          {
+            "display_name": "3.2.3",
+            "id": "3.2.3"
+          },
+          {
+            "display_name": "3.2.4",
+            "id": "3.2.4"
+          },
+          {
+            "display_name": "3.2.5",
+            "id": "3.2.5"
+          },
+          {
+            "display_name": "3.2.6",
+            "id": "3.2.6"
+          },
+          {
+            "display_name": "3.3.0",
+            "id": "3.3.0"
+          },
+          {
+            "display_name": "3.3.1",
+            "id": "3.3.1"
+          },
+          {
+            "display_name": "3.4.0",
+            "id": "3.4.0"
+          },
+          {
+            "display_name": "3.4.1",
+            "id": "3.4.1"
+          },
+          {
+            "display_name": "3.4.2",
+            "id": "3.4.2"
+          },
+          {
+            "display_name": "3.4.3",
+            "id": "3.4.3"
+          },
+          {
+            "display_name": "3.4.5",
+            "id": "3.4.5"
+          },
+          {
+            "display_name": "3.4.6",
+            "id": "3.4.6"
+          },
+          {
+            "display_name": "3.5.1",
+            "id": "3.5.1"
+          },
+          {
+            "display_name": "3.5.2",
+            "id": "3.5.2"
+          },
+          {
+            "display_name": "3.5.3",
+            "id": "3.5.3"
+          },
+          {
+            "display_name": "Unknown",
+            "id": "Unknown"
+          }
+        ]
+      },
+      {
+        "display_name": "Offer",
+        "group_display_name": "default",
+        "id": "offer",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "BlackFriday2024 (dn_1999_1y_1w0)",
+            "id": "BlackFriday2024 (dn_1999_1y_1w0)"
+          },
+          {
+            "display_name": "No offer",
+            "id": "No offer"
+          }
+        ]
+      },
+      {
+        "display_name": "Placement",
+        "group_display_name": "default",
+        "id": "placement_id",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No placement",
+            "id": "No placement"
+          }
+        ]
+      },
+      {
+        "display_name": "Targeting rule",
+        "group_display_name": "default",
+        "id": "targeting_rule_id",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No targeting rule",
+            "id": "No targeting rule"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Ad",
+        "group_display_name": "default",
+        "id": "attribution_ad",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No ad",
+            "id": "No ad"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Ad Group",
+        "group_display_name": "default",
+        "id": "attribution_ad_group",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Ad Group 01",
+            "id": "Ad Group 01"
+          },
+          {
+            "display_name": "No adgroup",
+            "id": "No adgroup"
+          },
+          {
+            "display_name": "US Campaign Ad Group 01",
+            "id": "US Campaign Ad Group 01"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Ad Campaign",
+        "group_display_name": "default",
+        "id": "attribution_campaign",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No campaign",
+            "id": "No campaign"
+          },
+          {
+            "display_name": "Search Results 01",
+            "id": "Search Results 01"
+          },
+          {
+            "display_name": "US Only Campaign 01",
+            "id": "US Only Campaign 01"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Creative",
+        "group_display_name": "default",
+        "id": "attribution_creative",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No creative",
+            "id": "No creative"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Keyword",
+        "group_display_name": "default",
+        "id": "attribution_keyword",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "No keyword",
+            "id": "No keyword"
+          },
+          {
+            "display_name": "brown noise",
+            "id": "brown noise"
+          },
+          {
+            "display_name": "fan noise",
+            "id": "fan noise"
+          },
+          {
+            "display_name": "green noise",
+            "id": "green noise"
+          },
+          {
+            "display_name": "pink noise",
+            "id": "pink noise"
+          },
+          {
+            "display_name": "rain sounds",
+            "id": "rain sounds"
+          },
+          {
+            "display_name": "sleep noise",
+            "id": "sleep noise"
+          },
+          {
+            "display_name": "sleep sounds",
+            "id": "sleep sounds"
+          },
+          {
+            "display_name": "sound machine",
+            "id": "sound machine"
+          },
+          {
+            "display_name": "white noise",
+            "id": "white noise"
+          },
+          {
+            "display_name": "white noise machine",
+            "id": "white noise machine"
+          }
+        ]
+      },
+      {
+        "display_name": "Attribution Source",
+        "group_display_name": "default",
+        "id": "attribution_source",
+        "object": "chart_filter_option",
+        "options": [
+          {
+            "display_name": "Apple Search Ads",
+            "id": "Apple Search Ads"
+          },
+          {
+            "display_name": "No Attribution",
+            "id": "No Attribution"
+          }
+        ]
+      }
+    ],
+    "object": "chart_options",
+    "resolutions": [
+      {
+        "display_name": "day",
+        "id": "0"
+      },
+      {
+        "display_name": "week",
+        "id": "1"
+      },
+      {
+        "display_name": "month",
+        "id": "2"
+      },
+      {
+        "display_name": "quarter",
+        "id": "3"
+      },
+      {
+        "display_name": "year",
+        "id": "4"
+      }
+    ],
+    "segments": [
+      {
+        "display_name": "App",
+        "group_display_name": "default",
+        "id": "app_id",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "App version",
+        "group_display_name": "default",
+        "id": "app_version",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Apple Search Ads claim type",
+        "group_display_name": "default",
+        "id": "apple_attribution_claim_type",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution ad",
+        "group_display_name": "default",
+        "id": "attribution_ad",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution ad group",
+        "group_display_name": "default",
+        "id": "attribution_ad_group",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution campaign",
+        "group_display_name": "default",
+        "id": "attribution_campaign",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution creative",
+        "group_display_name": "default",
+        "id": "attribution_creative",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution keyword",
+        "group_display_name": "default",
+        "id": "attribution_keyword",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Attribution source",
+        "group_display_name": "default",
+        "id": "attribution_source",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Country",
+        "group_display_name": "default",
+        "id": "country",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Custom attributes",
+        "group_display_name": "default",
+        "id": "external_subscriber_attributes",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "First purchase month",
+        "group_display_name": "default",
+        "id": "first_purchase_month",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Install month",
+        "group_display_name": "default",
+        "id": "install_month",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Offer",
+        "group_display_name": "default",
+        "id": "offer",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Offer type",
+        "group_display_name": "default",
+        "id": "offer_type",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Offering",
+        "group_display_name": "default",
+        "id": "offering_identifier",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Placement",
+        "group_display_name": "default",
+        "id": "placement_id",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Platform",
+        "group_display_name": "default",
+        "id": "platform",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Product duration",
+        "group_display_name": "default",
+        "id": "product_duration",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Product",
+        "group_display_name": "default",
+        "id": "product_id",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Project",
+        "group_display_name": "default",
+        "id": "project_id",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Store",
+        "group_display_name": "default",
+        "id": "store",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Renewal Cycle",
+        "group_display_name": "default",
+        "id": "subscription_renewal_cycle_group",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Targeting rule",
+        "group_display_name": "default",
+        "id": "targeting_rule_id",
+        "object": "chart_segment_option"
+      },
+      {
+        "display_name": "Transaction type",
+        "group_display_name": "default",
+        "id": "transaction_type",
+        "object": "chart_segment_option"
+      }
+    ],
+    "user_selectors": {
+      "revenue_type": {
+        "default": "revenue",
+        "display_name": "",
+        "effect": "backend",
+        "icon": "dollar",
+        "options": [
+          {
+            "display_name": "Revenue",
+            "id": "revenue"
+          },
+          {
+            "display_name": "Revenue (net of taxes)",
+            "id": "revenue_net_of_taxes"
+          },
+          {
+            "display_name": "Proceeds",
+            "id": "proceeds"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{"id":"R01","category":"routing","query":"How is Dark Noise doing right now?","expect":{"tool":"kaizen_get_overview"}}
+{"id":"R02","category":"routing","query":"What's the current MRR?","expect":{"tool":"kaizen_get_overview"}}
+{"id":"R03","category":"routing","query":"Show me MRR for the last 30 days","expect":{"tool":"kaizen_get_chart","argsHas":{"name":"mrr","resolution":"day"}}}
+{"id":"R04","category":"routing","query":"What's the trial conversion rate over the past month?","expect":{"tool":"kaizen_get_chart","argsHas":{"name":"trial_conversion_rate"}}}
+{"id":"R05","category":"routing","query":"How many active subscriptions do we have?","expect":{"tool":"kaizen_get_overview"}}
+{"id":"R06","category":"routing","query":"What metrics can I ask about?","expect":{"tool":"kaizen_list_charts"}}
+{"id":"R07","category":"routing","query":"Show revenue by month for the last year","expect":{"tool":"kaizen_get_chart","argsHas":{"name":"revenue","resolution":"month"}}}
+{"id":"R08","category":"routing","query":"What's the refund rate?","expect":{"tool":"kaizen_get_chart","argsHas":{"name":"refund_rate"}}}
+{"id":"R09","category":"routing","query":"Show me churn over the last 90 days","expect":{"tool":"kaizen_get_chart","argsHas":{"name":"churn"}}}
+{"id":"R10","category":"routing","query":"How many active users did we have in the last 28 days?","expect":{"tool":"kaizen_get_overview"}}
+{"id":"S01","category":"schema","query":"Break down MRR by store last quarter","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"mrr","segment":"store"}}}
+{"id":"S02","category":"schema","query":"What countries are driving subscription growth this year?","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"segment":"country"}}}
+{"id":"S03","category":"schema","query":"Filter MRR to just App Store subscriptions for 2026","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"mrr"}}}
+{"id":"S04","category":"schema","query":"Show revenue broken down by product for the last 60 days","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"revenue"}}}
+{"id":"S05","category":"schema","query":"Segment trials by platform for last quarter","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"trials"}}}
+{"id":"S06","category":"schema","query":"How does churn differ by store in 2026?","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"churn","segment":"store"}}}
+{"id":"S07","category":"schema","query":"Is Play Store growing faster than App Store this year?","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"]}}
+{"id":"S08","category":"schema","query":"Show ARR by first platform for last 6 months","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"arr"}}}
+{"id":"S09","category":"schema","query":"What's the trial conversion rate broken down by country?","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"],"argsHas":{"name":"trial_conversion_rate"}}}
+{"id":"S10","category":"schema","query":"Compare active subscribers by store for the last 90 days","expect":{"sequence":["kaizen_describe_chart","kaizen_get_chart"]}}
+{"id":"I01","category":"interpretation","query":"Give me a one paragraph summary of how the business is doing.","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I02","category":"interpretation","query":"Is MRR growing or shrinking over the last 30 days?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I03","category":"interpretation","query":"What's our most recent MRR, and how stable is the number?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I04","category":"interpretation","query":"Which store brings in the most revenue and by how much?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I05","category":"interpretation","query":"Are we converting trials well?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I06","category":"interpretation","query":"Has revenue grown year over year?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I07","category":"interpretation","query":"What's a surprising insight from this data?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I08","category":"interpretation","query":"How risky is our customer concentration?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I09","category":"interpretation","query":"If I had to cut churn in half, what should I look at?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
+{"id":"I10","category":"interpretation","query":"Is our trial conversion rate healthy for a subscription mobile app?","expect":{"rubric":["cites_real_numbers","mentions_incomplete_if_applicable","faithful_to_data"]}}
